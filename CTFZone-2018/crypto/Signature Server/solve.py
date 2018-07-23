@@ -172,3 +172,10 @@ def exploit():
 
 if __name__ == "__main__":
     exploit()
+
+""" Script output
+[+] Length cmd       : 36
+[+] Length signature : 1152
+[+] Sending payload  : execute_command:c2hvdyBmbGFn//////////////////////////////+GDQAA,4TdHBAjhEVN3bUZcIh8HhBeHhrXHc7kecB1DD0queaxpth0h4wbuOJzhY2+mC/CAOLBRT3jJSpLt5s9qWyGobl1fUjqmXWLz6uvbEmau/5qvashmCZT8RvuvNrGfMJ14PrZTHM7b/KVaTu24lTMF4CcWro/qoJdB9A84SUWT/NIMtM9FMqgEuWJx7YN5AiWzXkqwROjZsg4/CIx98HQ5AT2siTgC+rwgFSexUICZ3lhbW50ixZMOulM6MO5x59Qdk0TWHXLrRQ1FoAH5rzDTL954pWGlyhNJ+WURXDmEtpoa3ByQKXm5dIzGqv9k8rfP7zEowH5kQssz52fznibb2z6jvOKqtvUzY03fsyLu3G18v65o+IjyPkYWXepqnetoUUEiNnjwU+woeJ/Z6TqzMOxHHB0wYJrGBvhqTNs8kChMMqXEj15Lej1wT+CQeH1a1ve8HhWQKMdIo7hixl761B2FnmKbqGNEzLkvTPPJY91jMAw850us12Yftuaf9apH+URc+CCLWLCtDI4h+yth+8tvEFfGq+j82aU08u5PHaZjwqCrXUYiMf0XAxru5KnDTc2ZySDhr+5LznE51MoOxJ3aNH2VsDKTP7700B7LMZhe5pVa4BZTDMBuD8AAUSH0FFWOCis/VvAgOeiwPisG2nmCdz/kg1e2YRV9AQVcFIKG52uyrDfGO2nB9win/R9dTVIixQQpD6vSQcHZSpawlgsOZF5cGvoVRTdjb5EE02oE6cqSOow8JtZ1S4+2MyWiojIdZuboRApO/DL6s8/tgMphceUK9db1rAxIFWYT8kmgwRTB9cmpkAF/7V80Zkjej+JEcH/gduzDYAPB3919tVkMAnzNdsX4u5OuDstwkr3ZEAeAyTxbP5jC5qyWX+5Ilo+bC+li8PoPXN/BKTNrh7yk7rDoCrBz+sJ8UO6g1Hpt2am6ktMJXcXhnBNy/MQnkYOe/NpfXdRhc6aknB6btIB52zVVUDLZz7RYjbluv5Gqnx/gzg/d1CXFYIbnqwLjjpAo5oPJUW+PIDbmjHDgmycYMbuxY33OOyWWN842plo/8WNxKhqC4saHV/AgtzW/OvT8sA/BiGu7f0sHldvyK+uwNaYB6qJyfbcf5BZRPD2gnD+oGgxq8r+RPpXvQp9toXb/9FBNXDjW9jm2EACFWEN3H/NPx5BF+cATYbNGQRhSumrdvk+1VUiAl5JrrQ4QZZ0aaIk8rk9hvx9Zpl2DXK7t5LRDnqPR9/0Kdf/XRwRd3tgcqrrm1V19nggt+415ZfazGoCkNhYrYB0jtw4Tgdsef+2YTQcGK7sfyD8EbHiKO0HZfTZWR9DfMH1sbrgzxGR8CxFnLRI5IC6du7GiC34JkrRDBHnJiOGgxLDKvi7q7lI4sXYl/nzbQqoYJ8duVAkAc95Qw8OP04qr3jvrgH6bX5wjpImn7+xpSWbQAPrMxe8m/nr9iXYMVt6J2GU0Odf7kGPEEZjZ0KAwSOKrvApy3dSYGNkpAGDvb6cnHAxybB5nUOeiBswtUhk31Rx1
+Received data from exec_command : The flag is ctfzone{15de95d830304c6d19c86a559718e935}
+"""
