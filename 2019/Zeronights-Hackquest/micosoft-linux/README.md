@@ -1,12 +1,13 @@
 # Micosoft Linux
 
+Task:
 ```
 When we were in a bar with friends, a strange homeless-looking man came up to us and handed us two worn floppy disks. He muttered about some friend who was a time traveler. We did not understand anything, but one thing was clear to us that we needed to look at the contents of these diskettes. There was an image of the secret development of the operating system from Micosoft from 1998! When we launched this image, it required an activation code... We are asking for help to bypass the activation code. Because we are completely drunk now and don’t know where to start.
 ```
 
 ## Challenge analysis
 
-After extracting the archice we get a file named `task_2.is`, let's check the type of the file:
+After extracting the archice we get a file named `task_2.is`, let's check his type:
 ```bash
 $ file task2.iso
 jD74nd8_task2.iso: ISO 9660 CD-ROM filesystem data (DOS/MBR boot sector) 'ISOIMAGE' (bootable)
@@ -93,14 +94,14 @@ By analysing the bootloader we finally find that the kernel is compressed and st
 $ r2 -a x86 -b 64 kernel.xz
 [0x00000000]> s 0x22A85A
 [0x0022a85a]> pd 20
-            0x0022a85a      56             push rsi
-            0x0022a85b      4889f7         mov rdi, rsi
-            0x0022a85e      488d35db6500.  lea rsi, [0x00230e40]
-            0x0022a865      488d157d9add.  lea rdx, [0x000042e9]
-            0x0022a86c      b954652200     mov ecx, 0x226554
-            0x0022a871      4989e8         mov r8, rbp
-            0x0022a874      49c7c11c9108.  mov r9, 0x108911c
-            0x0022a87b      e8c02c0000     call xz_decompress
+0x0022a85a      56             push rsi
+0x0022a85b      4889f7         mov rdi, rsi
+0x0022a85e      488d35db6500.  lea rsi, [0x00230e40]
+0x0022a865      488d157d9add.  lea rdx, [0x000042e9]
+0x0022a86c      b954652200     mov ecx, 0x226554
+0x0022a871      4989e8         mov r8, rbp
+0x0022a874      49c7c11c9108.  mov r9, 0x108911c
+0x0022a87b      e8c02c0000     call xz_decompress
 [0x000042e9]> px
 - offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
 0x000042e9  fd37 7a58 5a00 0001 6922 de36 0201 0400  .7zXZ...i".6....
