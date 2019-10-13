@@ -1,22 +1,23 @@
 # Unlock
 
+Task:
 ```
 Oh, we found a strange files on the Internet, feel free to find what's inside.
 ```
 
 ## Challenge analysis
 
-After extracting the archice we get two files:
+After extracting the archice we get the following files:
 - `locker`: a Linux x86-64 executable.
 - `secret.png.enc`: an encrypted `PNG` file.
 
-Here we can guess that we will need to reverse `locker` in order to decrypt `secret.png.enc`.
+At this stage, we can guess that we will need to reverse `locker` in order to decrypt `secret.png.enc`.
 
-Reversing `locker` is an easily task, the only difficulty is that the binary is written in `Rust` but there is no need to understand this langage to understand how this executable work. Moreover, everything is implemented in the one function named `project::main::hd7e10029f20f35a8`. 
-
+Reversing `locker` is an easy task, the only difficulty is that the binary is written in `Rust` but there is no need to master this langage to understand how this executable works. Moreover, everything is implemented in the one function named `project::main::hd7e10029f20f35a8`. The encryption function can be rewritten in C like this:
 ```c
-#define ROR32(v, n) (((uint32_t)(v)) >> n) | (((uint32_t)(v)) << (32 - n))
-#define ROR64(v, n) ((((uint64_t)(v)) >> n) | (((uint64_t)(v)) << (64 - n)))
+#define BIT(v, n. b)   ((v >> n) & 1)
+#define ROR32(v, n)    (((uint32_t)(v)) >> n) | (((uint32_t)(v)) << (32 - n))
+#define ROR64(v, n)    ((((uint64_t)(v)) >> n) | (((uint64_t)(v)) << (64 - n)))
 
 unsigned int encrypt_dword(unsigned long val, unsigned long long k_round) {
     long j;
@@ -82,5 +83,5 @@ def encrypt_val(val, k_round):
     return val
 ```
 
-The complete script can be found [here](./locker.png). Finally, the flag can be found on this image:
+The complete script can be found [here](./locker.py) and the flag on this image:
 ![secret.png](./secret.png)
